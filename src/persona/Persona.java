@@ -1,15 +1,16 @@
-public abstract class Persona {
-    private String apellido;
-    private int edad;
-    private String nombre;
-    private String direccion;
+package persona;
 
-    public Persona(String nombre, String apellido, int edad, String direccion) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.direccion = direccion;
+public abstract class Persona {
+    String apellido;
+    int edad;
+    String nombre;
+    String direccion;
+    private String telefono;
+
+    public Persona() {
     }
+
+
 
     public String getApellido() {
         return apellido;
@@ -37,7 +38,7 @@ public abstract class Persona {
     }
     @Override
     public String toString() {
-        return "Persona [apellido=" + apellido + ", edad=" + edad + ", nombre=" + nombre + ", direccion=" + direccion + "]";
+        return "persona.Persona [apellido=" + apellido + ", edad=" + edad + ", nombre=" + nombre + ", direccion=" + direccion + "]";
     }
 }
 
