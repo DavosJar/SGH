@@ -1,5 +1,7 @@
 package paciente;
 
+import PersonalMedico.Doctor;
+
 import java.util.Date;
 
 public class Cita {
@@ -8,12 +10,25 @@ public class Cita {
     private String motivo;
     private Estado estado;
 
+
+    private Doctor doctor;
+    private Paciente paciente;
     private Historial historial;
 
     public Cita(Date fechaSolitud, Date fechaProgramada, String motivo) {
         this.fechaSolitud = fechaSolitud;
         this.fechaProgramada = fechaProgramada;
         this.motivo = motivo;
+    }
+    public  Cita(){
+    }
+
+    public Cita(Date fechaSolitud, Date fechaProgramada, String motivo, Estado estado, Doctor doctor, Paciente paciente, Historial historial) {
+        this();
+        this.estado = estado;
+        this.doctor = doctor;
+        this.paciente = paciente;
+        this.historial = historial;
     }
 
     public Estado getEstado() {
@@ -54,6 +69,22 @@ public class Cita {
 
     public void setHistorial(Historial historial) {
         this.historial = historial;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
 
     @Override

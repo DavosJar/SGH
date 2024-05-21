@@ -3,10 +3,10 @@ package PersonalMedico;
 public class Personal extends persona.Persona{
     private String dni;
     private String fechaIngreso;
-    private String estadoActual;
+    private EstadoActual estadoActual;
 
 
-    public Personal(String dni, String fechaIngreso, String especialidad) {
+    public Personal(String dni, String fechaIngreso, EstadoActual estadoActual) {
         this.dni = dni;
         this.fechaIngreso = fechaIngreso;
         this.estadoActual = estadoActual;
@@ -31,14 +31,13 @@ public class Personal extends persona.Persona{
         this.fechaIngreso = fechaIngreso;
     }
 
-    public String getEstadoActual() {
+    public EstadoActual getEstadoActual() {
         return estadoActual;
     }
 
-    public void setEstadoActual(String estadoActual) {
+    public void setEstadoActual(EstadoActual estadoActual) {
         this.estadoActual = estadoActual;
     }
-
     @Override
     public String toString() {
         return "PersonalMedico.Personal [dni=" + dni + ", fechaIngreso=" + fechaIngreso + ", estadoActual=" + estadoActual + "]";
